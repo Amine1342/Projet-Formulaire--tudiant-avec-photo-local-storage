@@ -62,15 +62,14 @@
             <tbody class="table-bordered table-responsive mt-3" style="text-align: center; vertical-align: middle;"
                 id="data">
                 <td></td>
-                <td><img src="" alt="" width="50" height="50"></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td>
                     <button class="btn btn-success"><i class="bi bi-file-person"></i></i></button>
-                    <button class="btn btn-success"><i class="bi bi-brush"></i></i></button>
-                    <button class="btn btn-success"><i class="bi bi-trash"></i></button>
+                    <button class="btn btn-primary"><i class="bi bi-brush"></i></i></button>
+                    <button class="btn btn-danger"><i class="bi bi-trash"></i></button>
                 </td>
             </tbody>
         </table>
@@ -78,40 +77,57 @@
     </div>
     <!-- Fin Tableau -->
 
-    <!-- Modal Formulaire -->
+    <!-- Modal Formulaire 2-->
     <div class="modal fade" id="userForm">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <!-- Modal Header -->
-                <div class="modal-header" style="background-color: #0d6efd;">
-                    <h4 class="modal-title">Formulaire</h4>
+                <div class="modal-header col-12" style="background-color: #0d6efd;">
+                    <h4 class="modal-title mx-auto">Formulaire</h4>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
                 <!-- Modal Body -->
-                <div class="modal-body"
-                    style="display: flex; justify-content: space-between; align-items: flex-start; padding: 0;">
-                    <form action="#" id="myForm">
-
-                        <!-- Modal formulaire-->
-                        <div class="inputForm" style="flex-basis: 68%; border-left: 5px groove blue; padding-left: 20px;">
-                            <div>
-                                <label for="name">Nom :</label>
-                                <input type="text" name="" id="name">
-
-                                <label for="name">Prénom :</label>
-                                <input type="text" name="" id="prenom">
-
-                                <label for="name">E-mail :</label>
-                                <input type="email" name="" id="email">
-
-                                <label for="name">Tél :</label>
-                                <input type="text" name="" id="tel">
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group mb-3">
+                            <!-- Nom et prénom-->
+                            <label for="name"> <strong>Nom :</strong></label>
+                            <input type="text" class="form-control" id="nom"
+                                placeholder="Saisissez le nom de l'étudiant" />
+                            <div class="invalid-feedback">
+                                Le nom de l'étudiant est obligatoire
                             </div>
 
+                            <label for="prenom"> <strong>Prénom :</strong></label>
+                            <input type="text" class="form-control" id="prenom"
+                                placeholder="Saisissez le prénom de l'étudiant" />
+                            <div class="invalid-feedback">
+                                Le prénom de l'étudiant est obligatoire
+                            </div>
+
+                            <!-- Email -->
+                            <label for="email"><strong>E-mail :</strong></label>
+                            <input type="email" class="form-control" id="email"
+                                placeholder="Saisissez la reference de votre produit" />
+                            <div class="invalid-feedback">
+                                L'email de l'étudiant est obligatoire
+                            </div>
+
+                            <!-- Télephone -->
+                            <label for="tel"><strong>Téléphone :</strong></label>
+                            <input type="tel" class="form-control" id="tel" placeholder="Numéro de téléphone" />
+                            <div class="invalid-feedback">
+                                Le numéro de téléphone est obligatoire
+                            </div>
                         </div>
                     </form>
 
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="submit" form="myForm" class="btn btn-primary submit">Ajouter</button>
                 </div>
 
                 <!-- Lier JS -->

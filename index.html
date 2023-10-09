@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- Fin Bootstrap -->
+
+    <!-- CSS only -->
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+    <title>CRUD operation</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd">
+        <div class="container-fluid">
+            <a class="navbar-brand" style="color: lightseagreen" ;><strong>Welcome to our school</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="ms-auto">
+                    <button class="btn btn-primary text-center" data-bs-toggle="modal" data-bs-target="#userForm">
+                        Ajouter étudiant <i class="bi bi-person-add"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Fin Navbar -->
+
+    <!-- Tableau responsif, bordé et centré -->
+    <div class="d-flex justify-content-center mt-5">
+        <table class="table table-bordered table-responsive mt-3" style="text-align: center; width: 80%">
+
+            <!-- Titres colonnes -->
+            <thead>
+                <tr class="table-dark">
+                    <th>N°</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>E-mail</th>
+                    <th>Tél</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <!-- Les données -->
+            <tbody class="table-bordered table-responsive mt-3" style="text-align: center; vertical-align: middle;"
+                id="data">
+                <td></td>
+                <td><img src="" alt="" width="50" height="50"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <button class="btn btn-success"><i class="bi bi-file-person"></i></i></button>
+                    <button class="btn btn-success"><i class="bi bi-brush"></i></i></button>
+                    <button class="btn btn-success"><i class="bi bi-trash"></i></button>
+                </td>
+            </tbody>
+        </table>
+    </div>
+    </div>
+    <!-- Fin Tableau -->
+
+    <!-- Modal Formulaire -->
+    <div class="modal fade" id="userForm">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header" style="background-color: #0d6efd;">
+                    <h4 class="modal-title">Formulaire</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body"
+                    style="display: flex; justify-content: space-between; align-items: flex-start; padding: 0;">
+                    <form action="#" id="myForm">
+                        <div class="imgholder" style="width: 200%; height: 200%; position: relative; border-radius: 20px; overflow: hidden;">
+                            <label for="imgInput" class="upload" style="display: none;">
+                                <input type="file" name="" id="imgInput">
+                                <i class="bi bi-plus-circle"></i>
+                            </label>
+                            <img src="Img/profil.png" alt="" width="200" height="200">
+                        </div>
+
+                        <!-- Modal formulaire-->
+                        <div class="inputForm" style="flex-basis: 68%; border-left: 5px groove blue; padding-left: 20px;">
+                            <div>
+                                <label for="name">Nom :</label>
+                                <input type="text" name="" id="name">
+
+                                <label for="name">Prénom :</label>
+                                <input type="text" name="" id="prenom">
+
+                                <label for="name">E-mail :</label>
+                                <input type="email" name="" id="email">
+
+                                <label for="name">Tél :</label>
+                                <input type="text" name="" id="tel">
+                            </div>
+
+                        </div>
+                    </form>
+
+                </div>
+
+                <!-- Lier JS -->
+                <script src="JS/app.js"></script>
+</body>
+
+</html>
